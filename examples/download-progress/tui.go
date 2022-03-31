@@ -20,8 +20,6 @@ type progressMsg float64
 
 type progressErrMsg struct{ err error }
 
-type finalPauseFinishedMsg struct{}
-
 func finalPause() tea.Cmd {
 	return tea.Tick(time.Millisecond*750, func(_ time.Time) tea.Msg {
 		return nil
